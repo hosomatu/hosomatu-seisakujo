@@ -55,6 +55,7 @@ export default function Header() {
             <li><a href="#pickup-song" onClick={() => setOpen(false)} className="text-gray-700 font-medium">Pick Up Song</a></li>
             <li><a href="#work" onClick={() => setOpen(false)} className="text-gray-700 font-medium">My Work</a></li>
             <li><a href="#history" onClick={() => setOpen(false)} className="text-gray-700 font-medium">My History</a></li>
+            <li><a href="#order" onClick={() => setOpen(false)} className="text-gray-700 font-medium">How to Order</a></li>
           </ul>
         </nav>
       </div>

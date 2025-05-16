@@ -2,6 +2,7 @@ import Header from "./components/Header/Header";
 import ProfileIntro from './components/Profile/ProfileIntro';
 import Youtube from './components/Youtube/Youtube';
 import HistoryTable from './components/HistoryTable/HistoryTable';
+import HowToOrder from "./components/HowToOrder/HowToOrder";
 
 const historyItems = [
     { date: '2019/03', description: 'ボカロPとして活動開始' },
@@ -41,6 +42,7 @@ function App() {
       <Youtube title="Pick Up Song" videoUrl="https://www.youtube.com/watch?v=LAGf3Ikh56A" description="2023ボーカロイドコレクションネタ曲部門参加作品" id="pickup-song" />
       <Youtube title="My Work" videoUrl="https://www.youtube.com/watch?v=rc6u-vR2GAk" description="「きのこめあ」オリジナルPVの楽曲制作および、ゲーム内BGMを一部担当" id="work" />
       <HistoryTable items={historyItems} />
+      <HowToOrder />
       </main>
     </>
   );

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
+import TailwindTest from "./TailwindTest";
 
 // 型付きの GraphQL クライアント。amplify/data/resource/Schema.tsで定義した型を使用
 const client = generateClient<Schema>();
@@ -36,25 +37,35 @@ function App() {
   }
 
   return (
-    <main>
-      <h1>{user?.signInDetails?.loginId}'s todos</h1>
-      <button onClick={createTodo}>+ new</button>
-      <ul>
+    <main className="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-lg">
+      <h1 className="text-2xl font-bold text-purple-700 mb-4">{user?.signInDetails?.loginId}'s todos</h1>
+      
+      {/* TailwindTestコンポーネントを追加 */}
+      <TailwindTest />
+      
+      <button 
+        className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mb-4"
+        onClick={createTodo}>+ new</button>
+      <ul className="bg-gray-100 rounded-lg overflow-hidden divide-y divide-gray-200 mb-4">
         {todos.map((todo) => (
           <li 
           onClick={() => deleteTodo(todo.id)}
+          className="px-4 py-3 hover:bg-gray-200 cursor-pointer"
           key={todo.id}>{todo.content}
           </li>
         ))}
       </ul>
-      <div>
+      <div className="mt-4 text-sm text-gray-600">
         🥳 App successfully hosted. Try creating a new todo.
         <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
+        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates" 
+          className="text-purple-600 hover:text-purple-800 font-semibold">
           Review next step of this tutorial.
         </a>
       </div>
-      <button onClick={signOut}>Sign out</button>
+      <button 
+        className="mt-6 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
+        onClick={signOut}>Sign out</button>
     </main>
   );
 }

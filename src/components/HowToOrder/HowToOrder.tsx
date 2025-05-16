@@ -17,8 +17,9 @@ export default function HowToOrder() {
           <div className="mb-4 text-sm text-gray-700">
             <p className="font-semibold mb-1">価格の理由</p>
             <p>
-              全然プロじゃない普通のサラリーマンのため<br />
-              「依頼者と楽しく一緒に作品を作る」ことを大切にしています。 
+              全然プロじゃない普通のサラリーマンのため。<br />
+              「依頼者の方と楽しく一緒に作品を作る」ことを大切にしています。 <br />
+              ご依頼はX DMでお願いします。
             </p>
           </div>
   

@@ -2,7 +2,7 @@ import SocialIcon from "./SocialIcon";
 
 export default function ProfileIntro() {
     return (
-      <section className="text-center py-6 bg-[#FFF0B3]">
+      <section className="text-center py-6">
         <img 
           src="/vocalo_icon.jpg" 
           alt="ほそまつ製作所のアイコン" 

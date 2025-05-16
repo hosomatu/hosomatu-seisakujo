@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import logo from '../../assets/images/site_logo.png';
+import textLogo from '/hosomatuseisakujo_logo.png';
 
 export default function Header() {
   // openという変数(状態)をsetOpenで管理して、初期状態をfalseとするだけでsetOpen(true)、setOpen(!open);のようなメソッドを使えるようになる
@@ -24,12 +25,12 @@ export default function Header() {
   }, [open]); // openの状態が変わったら再設定
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#F8F9FA] shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#FFFFFF] shadow-md">
       <div className="mx-auto flex h-full max-w-lg items-center justify-between px-4">
         {/* ロゴ */}
         <a href="/" className="flex items-center gap-2">
           <img src={logo} alt="ほそまつ製作所" className="h-8 w-auto" />
-          <span className="text-lg font-bold tracking-wide">ほそまつ製作所</span>
+          <img src={textLogo} alt="ほそまつ製作所" className="h-6 w-auto" />
         </a>
 
         {/* ハンバーガー */}

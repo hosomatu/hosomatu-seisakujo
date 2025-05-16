@@ -1,13 +1,11 @@
 /*=================================================================
 Reactアプリケーションのエントリーポイント。
-ReactDOM.createRootでReactのルート要素を作成し、そのルート要素にAuthenticatorコンポーネントを配置している。
-Authenticatorコンポーネントは、AWS Amplifyの認証機能を使用して、ユーザーのサインイン、サインアップ、認証状態の管理を行う。
-Appコンポーネントは、認証が完了したユーザーのみがアクセスできるコンテンツを表示する。
+ReactDOM.createRootでReactのルート要素を作成し、そのルート要素にAppコンポーネントを配置している。
+Appコンポーネントはサイトのメインコンテンツを表示します。
 =================================================================*/
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Authenticator } from '@aws-amplify/ui-react';
 import App from "./App.tsx";
 import "./index.css";
 import { Amplify } from "aws-amplify";

@@ -1,4 +1,3 @@
-import { useAuthenticator } from '@aws-amplify/ui-react';
 import Header from "./components/Header/Header";
 import ProfileIntro from './components/Profile/ProfileIntro';
 import Youtube from './components/Youtube/Youtube';
@@ -17,7 +16,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="mt-16">
+      <main className="mt-16 min-h-screen flex-grow pb-10">
         
       {/* TailwindTestコンポーネントを追加 */}
       <ProfileIntro />

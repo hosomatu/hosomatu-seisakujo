@@ -52,10 +52,9 @@ export default function Header() {
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-60' : 'max-h-0'}`}>
         <nav className="bg-[rgba(248,249,250,0.5)] shadow-inner">
           <ul className="flex flex-col items-center gap-4 py-4">
-            <li><a href="#pickup" onClick={() => setOpen(false)} className="text-gray-700 font-medium">Pick Up</a></li>
-            <li><a href="#works" onClick={() => setOpen(false)} className="text-gray-700 font-medium">My Works</a></li>
+            <li><a href="#pickup-song" onClick={() => setOpen(false)} className="text-gray-700 font-medium">Pick Up Song</a></li>
+            <li><a href="#work" onClick={() => setOpen(false)} className="text-gray-700 font-medium">My Work</a></li>
             <li><a href="#history" onClick={() => setOpen(false)} className="text-gray-700 font-medium">My History</a></li>
-            <li><a href="#order" onClick={() => setOpen(false)} className="text-gray-700 font-medium">Links</a></li>
           </ul>
         </nav>
       </div>

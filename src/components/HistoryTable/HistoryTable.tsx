@@ -1,6 +1,7 @@
 type HistoryItem = {
     date: string;
     description: string;
+    url?: string;
   };
   
   type Props = {
@@ -20,7 +21,15 @@ type HistoryItem = {
                   <td className="py-3 pr-6 font-mono text-sm text-gray-600 whitespace-nowrap w-1/4">
                     {item.date}
                   </td>
-                  <td className="py-3 text-sm text-gray-800">{item.description}</td>
+                  <td className="py-3 text-sm text-gray-800">
+                    {item.url ? (
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-blue-600">
+                        {item.description}
+                      </a>
+                    ) : (
+                      item.description
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -18,8 +18,6 @@ Amplify.configure(outputs);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(   
   <React.StrictMode>  {/* 開発用の安全チェックモード */}
-  <Authenticator>     {/* ← すべての機能に認証必須になっているので、後ほどApp.tsx側に移動する */}
     <App />
-  </Authenticator>
-</React.StrictMode>
+  </React.StrictMode>
 );

@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import logo from '../../assets/images/site_logo.png';
 
 export default function Header() {
+  // openという変数(状態)をsetOpenで管理して、初期状態をfalseとするだけでsetOpen(true)、setOpen(!open);のようなメソッドを使えるようになる
   const [open, setOpen] = useState(false);
   
-  // メニュー外のクリックを検知するためのイベントリスナー
+  // 画面クリックの監視というサイドエフェクトを設定
+  // handleClickOutsideという、画面上のどこかがクリックされたときに呼ばれる関数を定義
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
+      const target = event.target as HTMLElement; // as HTMLElementは型アノテーション。eventはクリックイベントの情報が入った特別なオブジェクトでtargetはクリックの対象のこと
       if (target.closest('[aria-label="Menu"]')) return;
       if (open) setOpen(false);
     };

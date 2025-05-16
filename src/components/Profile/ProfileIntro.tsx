@@ -8,8 +8,8 @@ export default function ProfileIntro() {
           alt="ほそまつ製作所のアイコン" 
           className="mx-auto w-50 h-50 rounded-full border-4 border-white shadow-lg object-cover"
         />
-        <h2 className="mt-4 text-lg font-bold">圧倒的パワー</h2>
-        <p className="text-sm text-gray-700">元気が出る曲を創ります</p>
+        <h2 className="mt-4 text-lg font-bold">ほそまつちよ</h2>
+        <p className="text-sm text-gray-700">圧倒的パワーで元気が出る曲をもりもり創ります</p>
         <div className="mt-4 flex justify-center gap-4">
         <SocialIcon
           href="https://www.nicovideo.jp/user/86861902?rf=nvpc&rp=watch&ra=video_information"

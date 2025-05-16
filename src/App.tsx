@@ -3,6 +3,7 @@ import { useAuthenticator } from '@aws-amplify/ui-react';
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
 import TailwindTest from "./TailwindTest";
+import Header from "./components/Header/Header";
 
 // 型付きの GraphQL クライアント。amplify/data/resource/Schema.tsで定義した型を使用
 const client = generateClient<Schema>();
@@ -37,9 +38,11 @@ function App() {
   }
 
   return (
-    <main className="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold text-purple-700 mb-4">{user?.signInDetails?.loginId}'s todos</h1>
-      
+    <>
+      <Header />
+      <main className="mt-16 p-6 max-w-lg mx-auto bg-white rounded-lg shadow-lg">
+        <h1 className="text-2xl font-bold text-purple-700 mb-4">ほそまつ製作所</h1>
+        
       {/* TailwindTestコンポーネントを追加 */}
       <TailwindTest />
       
@@ -66,7 +69,8 @@ function App() {
       <button 
         className="mt-6 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
         onClick={signOut}>Sign out</button>
-    </main>
+      </main>
+    </>
   );
 }
 
